@@ -19,22 +19,32 @@ import Sai from "./components/Sai/Sai.jsx";
 // const router = createBrowserRouter([
 //   {
 //     path: "/",
-//     element: <Root/>,
+//     element: <Root />,
 //     children: [
 //       {
 //         path: "",
-//         element: <Home/>
+//         element: <Home />,
 //       },
 //       {
 //         path: "about",
-//         element: <About/>
+//         element: <About />,
+//         children: [
+//           {
+//             path: "sai",
+//             element: <Sai />,
+//           },
+//         ],
 //       },
 //       {
 //         path: "contact",
-//         element: <Contact/>
-//       }
-//     ]
-//   }
+//         element: <Contact />,
+//       },
+//       {
+//         path: "/github",
+//         element: <Github />,
+//       },
+//     ],
+//   },
 // ]); //should include the array of routes, path, and the elements they render
 
 const router = createBrowserRouter(
@@ -53,7 +63,7 @@ const router = createBrowserRouter(
       <Route
         loader={getGithubInfoLoader} //loader helps you fecth the data faster, and infact you can write the entire function here
         path="github"
-        element= {<Github />}
+        element={<Github />}
       />
     </Route>
   )
